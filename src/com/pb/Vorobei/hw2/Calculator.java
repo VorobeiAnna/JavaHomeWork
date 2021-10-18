@@ -19,7 +19,7 @@ public class Calculator {
             num = scanner.nextInt();
         } else {
             System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-            scanner.next();//рекурсия
+            scanner.next();
             num = getInt();
         }
         return num;
@@ -41,6 +41,7 @@ public class Calculator {
     public static int calc(int operand1, int operand2, char operation){
         int result;
         switch (operation){
+
             case '+':
                 result = operand1+operand2;
                 break;
@@ -51,8 +52,9 @@ public class Calculator {
                 result = operand1*operand2;
                 break;
             case '/':
-                result = operand1/operand2;
-                break;
+                    result = operand1/operand2;
+                    break;
+
             default:
                 System.out.println("Операция не распознана. Повторите ввод.");
                 result = calc(operand1, operand2, getOperation());
